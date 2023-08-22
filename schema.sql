@@ -9,6 +9,6 @@ CREATE TABLE animals (
     name VARCHAR(100),
     date_of_birth DATE,
     scape_attempts INT, 
-    neutered BIT,
-    weight_kg DECIMAL(16,3);
+    neutered BOOLEAN,
+    weight_kg DECIMAL(16,3)
 );
