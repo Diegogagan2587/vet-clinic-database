@@ -1,8 +1,4 @@
-# curriculum-databases-projects-template
-
-> This template should be used for database related projects at Microverse.
-> Generate your own repository, update this README and edit all files content while working on projects. You should not be adding any new files unless asked otherwise.
-
+# Vet Clinic databases-project.
 
 ## Getting Started
 
@@ -63,31 +59,17 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 Vet clinic database <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
+> What is Vet Clinic ? 
 
-**[your_project__name]** is a...
+**Vet clinic** is a relational database project that creates a table to store animals'information, insert some data into it, and query it.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
-
-<details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-  </ul>
-</details>
-
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
-  </ul>
-</details>
+> Learn more about the tech used in this project.
 
 <details>
 <summary>Database</summary>
@@ -100,11 +82,11 @@ After you're finished please remove all the comments and instructions!
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
+> Do you want to know the key features? take a look below!
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- **You can use the files to Generate a table**
+- **You can save data into the table**
+- **You can use the files to query data from the table**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -260,7 +242,9 @@ If you like this project...
 
 > Give credit to everyone who inspired your codebase.
 
-I would like to thank...
+I would like to thank... 
+
+- [Learn SQL: Data Types ](https://learnsql.com/blog/postgresql-data-types/#:~:text=The%20DECIMAL%20and%20NUMERIC%20data,types%20can%20store%20rational%20numbers.)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
