@@ -5,7 +5,7 @@
 -- 2. Then we Create the new Table;
 
 CREATE TABLE animals (
-    id INT,
+    id INT GENERATED ALWAYS AS IDENTITY,
     name VARCHAR(100),
     date_of_birth DATE,
     scape_attempts INT, 
