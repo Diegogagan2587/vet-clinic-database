@@ -260,7 +260,9 @@ If you like this project...
 
 > Give credit to everyone who inspired your codebase.
 
-I would like to thank...
+I would like to thank... 
+
+- [Learn SQL: Data Types ](https://learnsql.com/blog/postgresql-data-types/#:~:text=The%20DECIMAL%20and%20NUMERIC%20data,types%20can%20store%20rational%20numbers.)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
