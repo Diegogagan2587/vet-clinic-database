@@ -24,16 +24,25 @@ Inside a transaction update the animals table by setting the species column to u
 --Start the Transactions
 BEGIN TRANSACTION;
 UPDATE animals SET species = 'unspecified';
+SELECT species FROM animals;
 ROLLBACK;
+
+SELECT species FROM animals;
 
 BEGIN TRANSACTION;
 UPDATE animals SET species = 'Digimon' WHERE name LIKE '%mon%';
 UPDATE animals SET species = 'Pokemon' WHERE species IS NULL;
+SELECT species FROM animals;
 COMMIT;
+
+SELECT species FROM animals;
 
 BEGIN TRANSACTION;
 DELETE FROM animals;
+SELECT * FROM animals;
 ROLLBACK;
+
+SELECT * FROM animals;
 
 BEGIN TRANSACTION;
 DELETE FROM animals WHERE date_of_birth > '2022-01-01';
