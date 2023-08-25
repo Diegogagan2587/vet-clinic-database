@@ -69,3 +69,30 @@ FROM animals
 WHERE date_of_birth > '1990-01-01' AND date_of_birth < '2000-01-01'
 GROUP BY species;
 
+--  <<<<<-------Questions Below: Query multiple tables--------->>>> ;
+--What animals belong to Melody Pond?
+SELECT name, full_name AS owner FROM animals JOIN owners ON animals.owner_id = owners.id WHERE full_name = 'Melody Pond';
+--List of all animals that are pokemon (their type is Pokemon).
+SELECT animals.name, species.name AS animal_type 
+FROM animals JOIN species ON animals.species_id = species.id 
+WHERE species.name = 'Pokemon';
+--List all owners and their animals, remember to include those that don't own any animal.
+SELECT full_name AS owner_name, name AS animal_name
+FROM owners LEFT JOIN animals ON animals.owner_id = owners.id;
+--How many animals are there per species?
+SELECT species.name AS species_name, COUNT(species_id) AS animals_per_specie
+FROM species RIGHT JOIN animals ON species_id = species.id
+GROUP BY species.name;
+--List all Digimon owned by Jennifer Orwell.
+SELECT species.name AS animal_type, owners.full_name AS owner_name, animals.name AS animal_name
+FROM animals FULL JOIN owners ON owner_id = owners.id 
+             FULL JOIN species ON species_id = species.id
+WHERE species.name = 'Digimon' AND owners.full_name = 'Jennifer Orwell';
+--List all animals owned by Dean Winchester that haven't tried to escape.
+SELECT animals.name  AS animal_name, owners.full_name AS owner_name, animals.scape_attempts
+FROM animals FULL JOIN owners ON owner_id = owners.id
+WHERE owners.full_name = 'Dean Winchester' AND animals.scape_attempts = 0;
+--Who owns the most animals?
+SELECT owners.full_name AS owner_name, COUNT(animals.name) AS animals_per_owner
+FROM animals FULL JOIN owners on owner_id = owners.id
+GROUP BY owners.full_name ORDER BY animals_per_owner DESC;
