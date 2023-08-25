@@ -94,59 +94,68 @@ After you're finished please remove all the comments and instructions!
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
+> Do you want to re-create the data base?
 
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need:
+In order to run this project you need to install `PostgreSQL`, you can find more information in the next link: [PostgreSQL](https://www.postgresql.org/download/linux/ubuntu/)
 
-<!--
-Example command:
-
+ 1. Create the file rpository configuration:
 ```sh
- gem install rails
+ sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
 ```
- -->
+ 2. Import the repository signing key:
+ ```sh
+   wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+ ```
+
+ 3. Update the package lists:
+ ```sh
+   sudo apt-get update
+ ```
+ 4. Install the latest version of PostgreSQL.
+ ```sh
+  sudo apt-get -y install postgresql
+ ```
+
+
+
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-<!--
-Example commands:
-
 ```sh
   cd my-folder
-  git clone git@github.com:myaccount/my-project.git
+  git clone git@github.com:Diegogagan2587/vet-clinic-database.git
 ```
---->
+
 
 ### Install
 
 Install this project with:
 
-<!--
-Example command:
-
+1. To create a new data base, open you terminal (shell or bash)
+2. Create a new data base within your terminal, for the next example the new databas will be named `mydb`;
 ```sh
-  cd my-project
-  gem install
+createdb mydb
 ```
---->
+3. Open your new database in  `psql` :
+```sh
+psql mydb
+
+```
+4. Copy the data from `schema.sql` and paste it in the terminal to initialize all the requrired tables.
+5. Copy and paste the data from `data.sql` to update the tables we have just created
+6. You can start now experimenting with your own queries.
 
 ### Usage
 
-To run the project, execute the following command:
-
-<!--
-Example command:
-
-```sh
-  rails server
-```
---->
+This repos is including pre-defined queries that you can check how they works, 
+Just copy and paste the content from `queries.sql`, or you can create your own queries and 
+use the mentioned file as a guide.
 
 ### Run tests
 
