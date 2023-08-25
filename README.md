@@ -52,7 +52,6 @@ After you're finished please remove all the comments and instructions!
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ](#faq)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
@@ -167,7 +166,7 @@ Not available for this project.
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
+> Below you can find data about creators:
 
 👤 **Dievo Vidal Lopez**
 
@@ -193,7 +192,7 @@ Not available for this project.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/Diegogagan2587/vet-clinic-database/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -201,9 +200,9 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
+> Would you like to show support?
 
-If you like this project...
+If you like this project feel free to clone it, offer suggestion on issues page or even leave us an star.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -211,36 +210,19 @@ If you like this project...
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
 
-I would like to thank... 
+I would like to thank Microverse for proposing this activity.
 
+Thanks to learnsql.com for providing documentation, it help to understand this topic:
 - [Learn SQL: Data Types ](https://learnsql.com/blog/postgresql-data-types/#:~:text=The%20DECIMAL%20and%20NUMERIC%20data,types%20can%20store%20rational%20numbers.)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FAQ (optional) -->
-
-## ❓ FAQ <a name="faq"></a>
-
-> Add at least 2 questions new developers would ask when they decide to use your project.
-
-- **[Question_1]**
-
-  - [Answer_1]
-
-- **[Question_2]**
-
-  - [Answer_2]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
