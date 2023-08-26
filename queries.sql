@@ -159,8 +159,27 @@ WHERE vets.name = 'Maisy Smith' AND visits.visits_dates = (
     ) AS date_sub_query
 )
 ;
-
 --Details for most recent visit: animal information, vet information, and date of visit.
+SELECT animals.name, 
+       date_of_birth, 
+       scape_attempts, 
+       neutered, 
+       weight_kg, 
+       species.name AS species,
+       owners.full_name AS owner_name,
+       vets.name AS vets_name,
+       vets.age AS vets_age,
+       vets.date_of_graduation AS vets_date_of_graduation,
+       visits_dates
+FROM animals JOIN species ON animals.species_id = species.id
+             JOIN owners ON animals.owner_id = owners.id
+             JOIN visits ON animals.id = visits.animals_id
+             JOIN vets ON vets.id = visits.vets_id
+WHERE visits_dates = (
+    SELECT MAX(visits_dates) 
+    FROM visits
+)
+;
 --How many visits were with a vet that did not specialize in that animal's species?
 --What specialty should Maisy Smith consider getting? Look for the species she gets the most.
 ---->> Lesson: Add "Join table" for visits Ends here <<----
