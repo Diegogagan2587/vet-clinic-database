@@ -200,4 +200,14 @@ GROUP BY species_vs_specializations.vets_name
 ;
 
 --What specialty should Maisy Smith consider getting? Look for the species she gets the most.
+SELECT vets.name AS vets_name,
+       species.name AS animal_species,
+       COUNT(visits_dates) AS visits_per_species
+FROM animals FULL JOIN species ON animals.species_id = species.id
+             FULL JOIN visits ON animals.id = visits.animals_id
+             FULL JOIN vets ON vets.id = visits.vets_id
+             FULL JOIN specializations ON vets.id = specializations.vets_id
+WHERE vets.name = 'Maisy Smith'
+GROUP BY vets.name, animal_species
+;
 ---->> Lesson: Add "Join table" for visits Ends here <<----
