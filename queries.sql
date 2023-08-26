@@ -106,4 +106,61 @@ HAVING COUNT(animals.name) = (
     ) AS animal_counts_subquery
 );
 ---->> Lesson: Add "Join table" for visits start here <<----
+--Who was the last animal seen by William Thatcher?
+SELECT vets.name AS veterinarian, animals.name AS last_animal, visits.visits_dates AS last_visit
+FROM vets JOIN visits ON vets.id = visits.vets_id
+          JOIN animals ON visits.animals_id = animals.id
+WHERE vets.name = 'William Tatcher' AND visits.visits_dates = (
+    SELECT MAX(visits_dates) AS last_visit
+    FROM vets JOIN visits ON visits.vets_id = vets.id
+    WHERE vets.name = 'William Tatcher'
+    GROUP BY vets.name
+);
+--How many different animals did Stephanie Mendez see?
+SELECT vets.name AS veterinarian,COUNT(animals.name) AS diferent_animals_seen
+FROM vets JOIN visits ON vets_id = vets.id
+          JOIN animals ON animals_id = animals.id
+WHERE vets.name = 'Stephanie Mendez'
+GROUP BY vets.name;
+--List all vets and their specialties, including vets with no specialties.
+SELECT vets.name, species.name AS specialties
+FROM vets FULL JOIN specializations ON vets_id = vets.id
+          FULL JOIN species ON species_id = species.id;
+--List all animals that visited Stephanie Mendez between April 1st and August 30th, 2020.
+SELECT animals.name AS animal_name, vets.name AS veterinarian, visits_dates
+FROM animals JOIN visits ON animals_id = animals.id
+             JOIN vets ON vets_id = vets.id
+WHERE vets.name = 'Stephanie Mendez' AND visits_dates > '2020-04-01' AND visits_dates < '2020-08-30'
+;
+--What animal has the most visits to vets?
+SELECT animals.name AS animal_name, COUNT(visits.visits_dates) AS number_of_visits
+FROM animals JOIN visits ON animals.id = animals_id
+GROUP BY animal_name
+HAVING COUNT(visits.visits_dates)  = (
+    SELECT MAX(visit_count)
+    FROM (
+        SELECT animals_id, COUNT(visits_dates) AS visit_count
+        FROM visits
+        GROUP BY animals_id
+    ) AS visit_counts_sub_query
+)
+;
+--Who was Maisy Smith's first visit?
+SELECT vets.name AS veterinarian, animals.name AS animal_name, visits.visits_dates 
+FROM vets JOIN visits ON vets.id = visits.vets_id
+          JOIN animals ON animals.id = visits.animals_id
+WHERE vets.name = 'Maisy Smith' AND visits.visits_dates = (
+    SELECT  visit_date 
+    FROM (
+        SELECT vets.name, MIN(visits.visits_dates) AS visit_date
+        FROM vets JOIN visits on vets.id = visits.vets_id
+        WHERE vets.name = 'Maisy Smith'
+        GROUP BY vets.name
+    ) AS date_sub_query
+)
+;
+
+--Details for most recent visit: animal information, vet information, and date of visit.
+--How many visits were with a vet that did not specialize in that animal's species?
+--What specialty should Maisy Smith consider getting? Look for the species she gets the most.
 ---->> Lesson: Add "Join table" for visits Ends here <<----
