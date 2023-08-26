@@ -44,4 +44,11 @@ ALTER TABLE animals ADD CONSTRAINT fk_owners FOREIGN KEY (owner_id) REFERENCES o
 
 ---->> Lesson: Query multiple tables ends here <<----
 ---->> Lesson: Add "Join table" for visits start here <<----
+CREATE TABLE vets (
+    id INT GENERATED ALWAYS AS IDENTITY,
+    name VARCHAR(250),
+    age INT,
+    date_of_graduation DATE,
+    PRIMARY KEY (id)
+);
 ---->> Lesson: Add "Join table" for visits Ends here <<----
