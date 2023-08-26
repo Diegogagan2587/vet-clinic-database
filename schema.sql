@@ -64,7 +64,7 @@ CREATE TABLE visits (
     animals_id INT,
     vets_id INT,
     visits_dates DATE,
-    CONSTRAINT pk_visits PRIMARY KEY (animals_id,vets_id),
+    CONSTRAINT pk_visits PRIMARY KEY (animals_id,vets_id,visits_dates),
     CONSTRAINT fk_animals FOREIGN KEY (animals_id) REFERENCES animals(id),
     CONSTRAINT fk_vets FOREIGN KEY (vets_id) REFERENCES vets(id)
 );
