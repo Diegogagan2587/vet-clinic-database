@@ -56,3 +56,5 @@ UPDATE animals SET owner_id = 4 WHERE name IN ('Charmander','Squirtle','Blossom'
 UPDATE animals SET owner_id = 5 WHERE name IN ('Angemon','Boarmon');
 
 ---->> Lesson: Query multiple tables ends here <<----
+---->> Lesson: Add "Join table" for visits start here <<----
+---->> Lesson: Add "Join table" for visits Ends here <<----

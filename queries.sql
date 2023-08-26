@@ -105,3 +105,5 @@ HAVING COUNT(animals.name) = (
         GROUP BY owner_id
     ) AS animal_counts_subquery
 );
+---->> Lesson: Add "Join table" for visits start here <<----
+---->> Lesson: Add "Join table" for visits Ends here <<----

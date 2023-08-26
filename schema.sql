@@ -43,3 +43,5 @@ ALTER TABLE animals ADD owner_id INT;
 ALTER TABLE animals ADD CONSTRAINT fk_owners FOREIGN KEY (owner_id) REFERENCES owners(id);
 
 ---->> Lesson: Query multiple tables ends here <<----
+---->> Lesson: Add "Join table" for visits start here <<----
+---->> Lesson: Add "Join table" for visits Ends here <<----
